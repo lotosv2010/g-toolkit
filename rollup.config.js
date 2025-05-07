@@ -10,7 +10,7 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.main,
+      file: 'dist/index.cjs',
       format: 'cjs',
       sourcemap: true,
     },
@@ -20,9 +20,9 @@ export default {
       sourcemap: true,
     },
     {
-      file: 'dist/index.umd.js',
+      file: pkg.browser,
       format: 'umd',
-      name: 'GRollupTemplate',
+      name: 'GToolkitPlus',
       sourcemap: true,
     },
   ],

@@ -1,5 +1,5 @@
 // 引入打包好的 CommonJS 格式文件
-const { unique, groupBy, toCamelCase, toKebabCase, deepClone, get } = require('../dist/index.js');
+const { unique, groupBy, toCamelCase, toKebabCase, deepClone, get } = require('../dist/index.cjs');
 
 // 数组工具函数示例
 const numbers = [1, 2, 2, 3, 3, 4, 5];

@@ -4,15 +4,16 @@
   "description": "A collection of useful JavaScript utility functions",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.js",
   "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js",
-      "browser": "./dist/index.umd.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "browser": "./dist/index.umd.js",
+      "default": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },

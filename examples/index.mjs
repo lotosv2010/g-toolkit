@@ -1,5 +1,5 @@
 // 引入打包好的 ESM 格式文件
-import { unique, groupBy, toCamelCase, toKebabCase, deepClone, get } from '../dist/index.esm.js';
+import { unique, groupBy, toCamelCase, toKebabCase, deepClone, get } from '../dist/index.js';
 
 // 数组工具函数示例
 const numbers = [1, 2, 2, 3, 3, 4, 5];
