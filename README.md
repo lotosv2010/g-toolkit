@@ -1,4 +1,4 @@
-# g-toolkit
+# g-toolkit-plus
 
 一个基于 Rollup 构建的 JavaScript 工具函数库，支持 CommonJS、ESM 和 UMD 格式。
 
@@ -16,11 +16,11 @@
 ## 安装
 
 ```bash
-npm install g-toolkit
+npm install g-toolkit-plus
 # 或
-yarn add g-toolkit
+yarn add g-toolkit-plus
 # 或
-pnpm add g-toolkit
+pnpm add g-toolkit-plus
 ```
 
 ## 使用
@@ -114,7 +114,7 @@ pnpm run prepublishOnly
 ## 项目结构
 
 ```text
-g-toolkit/
+g-toolkit-plus/
 ├── src/                   # 源代码目录
 │   ├── utils/             # 工具函数目录
 │   │   ├── array.ts       # 数组工具函数
