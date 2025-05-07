@@ -1,6 +1,6 @@
 {
   "name": "g-toolkit-plus",
-  "version": "2.0.0-0",
+  "version": "2.0.0",
   "description": "A collection of useful JavaScript utility functions",
   "type": "module",
   "main": "dist/index.js",
