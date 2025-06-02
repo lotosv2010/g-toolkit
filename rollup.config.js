@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
+import babel from '@rollup/plugin-babel';
 import { readFileSync } from 'fs';
 
 const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
@@ -30,6 +31,12 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
+    babel({
+      babelHelpers: 'bundled',
+      exclude: 'node_modules/**',
+      include: ['src/**/*'],
+      skipPreflightCheck: true, // 避免与TypeScript插件冲突
+    }),
     typescript({
       tsconfig: './tsconfig.json',
     }),

@@ -5,7 +5,7 @@
  * @returns 去重后的数组
  * @throws {TypeError} 当输入不是数组时抛出错误
  */
-export function unique<T>(arr: T[], key?: keyof T): T[] {
+export const unique = <T>(arr: T[], key?: keyof T): T[] =>{
   if (!Array.isArray(arr)) {
     throw new TypeError('Expected an array');
   }
