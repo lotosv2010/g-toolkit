@@ -4,8 +4,21 @@ import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 import babel from '@rollup/plugin-babel';
 import { readFileSync } from 'fs';
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
 
 const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
+const isProduction = process.env.NODE_ENV === 'production';
+
+const servers = () => [
+  serve({
+    port: 3000,
+    contentBase: ['./dist'],
+    open: true,
+    openPage: '/index.html',
+  }),
+  livereload(),
+];
 
 export default {
   input: 'src/index.ts',
@@ -40,6 +53,5 @@ export default {
     typescript({
       tsconfig: './tsconfig.json',
     }),
-    terser(),
-  ],
+  ].concat(isProduction ? [terser()] : servers()),
 };
