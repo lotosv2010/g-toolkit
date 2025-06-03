@@ -13,4 +13,6 @@ export default {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
+  reporters: ['default'],
+  errorOnDeprecated: true, //  避免使用deprecated的API
 };
